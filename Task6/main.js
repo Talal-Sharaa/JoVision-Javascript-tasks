@@ -28,17 +28,17 @@ function PrintSelectedNumbers(MyArray, start, end) {
 }
 
 function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-          let j = Math.floor(Math.random() * (i + 1));
-            [array[i], array[j]] = [array[j], array[i]];
-        }
-    }
+  for (let i = array.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
 
-    function sortDescending(array) {
-        array.sort(function(a, b) {
-            return b - a;
-        });
-    }
+function sortDescending(array) {
+  array.sort(function (a, b) {
+    return b - a;
+  });
+}
 
 document.getElementById("myButton1").addEventListener("click", function () {
   let MyArray = createArray(0, 100);
@@ -66,10 +66,9 @@ document.getElementById("myButton4").addEventListener("click", function () {
 });
 
 document.getElementById("myButton5").addEventListener("click", function () {
-    let MyArray = createArray(0, 100);
-    shuffleArray(MyArray);
-    console.log(MyArray);
-    sortDescending(MyArray);
-    console.log(MyArray);
-
+  let MyArray = createArray(0, 100);
+  shuffleArray(MyArray);
+  console.log(MyArray);
+  sortDescending(MyArray);
+  console.log(MyArray);
 });
